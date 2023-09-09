@@ -20,7 +20,7 @@
   position: absolute;
   inset: 0;
   margin: auto;
-  transition: 500ms;
+  transition: 2000ms;
 }
 .slider-image.active {
   opacity: 0.6;
