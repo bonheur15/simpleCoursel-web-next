@@ -62,7 +62,7 @@ export default function Home() {
           className="slider-image"
           alt="Image"
         />
-        <div id="words-above-images">Hello world</div>
+        <div id="words-above-images">Welcome to Kingdom Embassy Church</div>
       </div>
     </>
   );
