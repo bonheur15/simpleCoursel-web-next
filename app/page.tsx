@@ -41,6 +41,7 @@ export default function Home() {
         >
           About
         </div>
+        <div className="btn">Contact us</div>
       </div>
       <div id="slider-container">
         <Image
