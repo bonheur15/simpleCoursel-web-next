@@ -28,6 +28,10 @@
 body {
   background-color: black;
 }
+#words-above-images img {
+  width: 300px;
+  height: auto;
+}
 #words-above-images {
   width: 100%;
   height: 100%;
@@ -41,6 +45,22 @@ body {
   font-weight: bold;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  text-transform: capitalize;
+}
+#words-above-images #c1 {
+  font-size: 40px;
+  font-weight: normal;
+  margin-bottom: 30px;
+  margin-top: 70px;
+}
+#words-above-images #c2 {
+  margin-bottom: 0;
+  margin-top: 0px;
+}
+#words-above-images #c3 {
+  margin-bottom: 0;
+  margin-top: 0px;
 }
 .aboutus,
 .contactus {
@@ -58,14 +78,17 @@ body {
   transition: 500ms;
 }
 .contactus img {
-  width: 500px;
+  width: 800px;
   max-width: 95vw;
   height: auto;
 }
 .aboutus img {
-  width: 500px;
+  width: 700px;
   max-width: 95vw;
   height: auto;
+}
+.contactus .contact {
+  box-shadow: -5px 5px 14px 3px #00000026;
 }
 .contactus.active {
   transform: scale(1);

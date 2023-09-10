@@ -5,6 +5,7 @@ import Image_2 from "../public/assets/img2.jpg";
 import Image_3 from "../public/assets/img3.jpg";
 import church_svg from "../public/Church.svg";
 import contact_svg from "../public/Frame 1.svg";
+import logo from "../public/logo.png";
 import { RefObject, useRef, useState } from "react";
 let currentImage = 0;
 let initalState = false;
@@ -67,16 +68,21 @@ export default function Home() {
         <Image
           src={Image_2}
           ref={imageRef[1]}
-          className="slider-image"
+          className="slider-image "
           alt="Image"
         />
         <Image
           src={Image_3}
           ref={imageRef[2]}
-          className="slider-image"
+          className="slider-image "
           alt="Image"
         />
-        <div id="words-above-images">Welcome to Kingdom Embassy Church</div>
+        <div id="words-above-images">
+          <Image src={logo} alt="logo" />
+          <p id="c1">WELCOME TO</p>
+          <p id="c2">KINGDOM EMBASSY MISSION</p>
+          <p id="c3">CHURCH</p>
+        </div>
       </div>
     </>
   );
@@ -95,7 +101,7 @@ function ContactUs(data: { active: boolean }) {
   return (
     <>
       <div className={data.active ? "contactus active" : "contactus"}>
-        <Image src={contact_svg} alt="something" />
+        <Image src={contact_svg} className="contact" alt="something" />
       </div>
     </>
   );
