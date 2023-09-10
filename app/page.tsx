@@ -3,6 +3,7 @@ import Image from "next/image";
 import Image_1 from "../public/assets/img1.jpg";
 import Image_2 from "../public/assets/img2.jpg";
 import Image_3 from "../public/assets/img3.jpg";
+import church_svg from "../public/Church.svg";
 import { RefObject, useRef, useState } from "react";
 let currentImage = 0;
 let initalState = false;
@@ -70,7 +71,9 @@ export default function Home() {
 function AboutUs(data: { active: boolean }) {
   return (
     <>
-      <div className={data.active ? "aboutus active" : "aboutus"}></div>
+      <div className={data.active ? "aboutus active" : "aboutus"}>
+        <Image src={church_svg} alt="something" />
+      </div>
     </>
   );
 }

@@ -51,10 +51,17 @@ body {
   background-color: white;
   z-index: 9999;
   transform: scale(0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: 500ms;
 }
-.contactus {
+.aboutus img {
+  width: 500px;
+  max-width: 95vw;
+  height: auto;
 }
+
 .aboutus.active {
   transform: scale(1);
 }
@@ -77,8 +84,9 @@ body {
   padding: 10px 40px;
   height: fit-content;
   width: fit-content;
-  background-color: white;
+  background-color: rgb(230, 229, 229);
   color: black;
   cursor: pointer;
   margin-left: 30px;
+  border-radius: 20px;
 }
