@@ -42,7 +42,8 @@ body {
   justify-content: center;
   align-items: center;
 }
-.aboutus {
+.aboutus,
+.contactus {
   width: 100%;
   position: absolute;
   height: 100%;
@@ -56,10 +57,18 @@ body {
   align-items: center;
   transition: 500ms;
 }
+.contactus img {
+  width: 500px;
+  max-width: 95vw;
+  height: auto;
+}
 .aboutus img {
   width: 500px;
   max-width: 95vw;
   height: auto;
+}
+.contactus.active {
+  transform: scale(1);
 }
 
 .aboutus.active {

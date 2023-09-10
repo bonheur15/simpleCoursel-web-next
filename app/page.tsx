@@ -4,6 +4,7 @@ import Image_1 from "../public/assets/img1.jpg";
 import Image_2 from "../public/assets/img2.jpg";
 import Image_3 from "../public/assets/img3.jpg";
 import church_svg from "../public/Church.svg";
+import contact_svg from "../public/Frame 1.svg";
 import { RefObject, useRef, useState } from "react";
 let currentImage = 0;
 let initalState = false;
@@ -14,6 +15,8 @@ export default function Home() {
     useRef(null),
   ];
   const [IsAboutActive, SetIsAboutActive] = useState(false);
+  const [IsContactActive, SetIsContactActive] = useState(false);
+
   function ChangeImage() {
     currentImage += 1;
     currentImage == 3 ? (currentImage = 0) : "";
@@ -33,16 +36,26 @@ export default function Home() {
   return (
     <>
       <AboutUs active={IsAboutActive} />
+      <ContactUs active={IsContactActive} />
       <div id="head">
         <div
           className="btn"
           onClick={() => {
             SetIsAboutActive(!IsAboutActive);
+            SetIsContactActive(false);
           }}
         >
           About
         </div>
-        <div className="btn">Contact us</div>
+        <div
+          className="btn"
+          onClick={() => {
+            SetIsContactActive(!IsContactActive);
+            SetIsAboutActive(false);
+          }}
+        >
+          Contact us
+        </div>
       </div>
       <div id="slider-container">
         <Image
@@ -73,6 +86,16 @@ function AboutUs(data: { active: boolean }) {
     <>
       <div className={data.active ? "aboutus active" : "aboutus"}>
         <Image src={church_svg} alt="something" />
+      </div>
+    </>
+  );
+}
+
+function ContactUs(data: { active: boolean }) {
+  return (
+    <>
+      <div className={data.active ? "contactus active" : "contactus"}>
+        <Image src={contact_svg} alt="something" />
       </div>
     </>
   );
