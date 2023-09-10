@@ -80,8 +80,8 @@ export default function Home() {
         <div id="words-above-images">
           <Image src={logo} alt="logo" />
           <p id="c1">WELCOME TO</p>
-          <p id="c2">KINGDOM EMBASSY MISSION</p>
-          <p id="c3">CHURCH</p>
+          <p id="c2">KINGDOM EMBASSY</p>
+          {/* <p id="c3">CHURCH</p> */}
         </div>
       </div>
     </>
